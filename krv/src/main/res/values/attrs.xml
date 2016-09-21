@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KRecyclerView">
+        <attr name="focusedItemHeight" format="dimension"/>
+        <attr name="defaultItemHeight" format="dimension" />
+        <attr name="flingScrollSpeedFactor" format="float"/>
+        <attr name="updateWhenPixelChangedLargerThan" format="dimension" />
+    </declare-styleable>
+</resources>
