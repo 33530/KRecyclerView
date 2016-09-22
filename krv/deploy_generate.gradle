@@ -87,7 +87,7 @@ install {
                 }
                 developers {
                     developer {
-                        id 'khang-nt'
+                        id user
                         name 'Khang NT'
                         email 'khang.neon.1997@gmail.com'
                     }
