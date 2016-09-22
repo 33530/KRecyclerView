@@ -4,10 +4,9 @@ jdk:
 android:
   components:
     - tools
+    - build-tools-24.0.2
+    - android-24
     - extra
-before_script:
-  - echo y | android update sdk --no-ui --all --filter build-tools-24.0.2
-  - echo y | android update sdk --no-ui --all --filter android-24
 script: ./gradlew build -x lint
 cache:
   directories:
