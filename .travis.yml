@@ -10,6 +10,6 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 deploy:
-  - ./gradlew :krv:bintrayUpload -PreleaseVersion=${TRAVIS_TAG:1}
+    - ./gradlew :krv:bintrayUpload -PreleaseVersion=${TRAVIS_TAG:1}
   on:
     tags: true
