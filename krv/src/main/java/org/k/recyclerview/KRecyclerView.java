@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.IllegalFormatCodePointException;
+
 /**
  * Created by khangnt on 9/19/16.
  * Email: khang.neon.1997@gmail.com
@@ -74,12 +76,12 @@ public class KRecyclerView extends RecyclerView {
     }
 
     @Override
-    public void setAdapter(Adapter adapter) {
+    public void setAdapter(Adapter adapter) throws IllegalArgumentException {
         if (adapter instanceof EndlessAdapter) {
             this.adapter = ((EndlessAdapter) adapter);
             super.setAdapter(adapter);
         } else
-            throw new IllegalArgumentException("Adapter must be instance of EndlessAdapter");
+            throw new IllegalArgumentException("Adapter must be instance of KRecyclerView.EndlessAdapter");
     }
 
     public void setFocusPosition(int focusPosition) {
