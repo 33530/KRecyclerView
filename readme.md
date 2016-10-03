@@ -7,9 +7,9 @@
 # Install
 ```groovy
 dependencies {
-    compile 'org.k.recyclerview:krv:$paste-latest-version-$'
+    compile 'org.k.recyclerview:krv:$paste-latest-version-here$'
 }
-```here
+```
 
 # How to use:
 ## Add KRecyclerView to your layout:
@@ -28,4 +28,4 @@ Attribute | Format | Default Value | Description
 `focusedItemHeight` | dimension | 400px | Max height of focused items
 `defaultItemHeight` | dimension | 200px | Min height of default items
 `flingScrollSpeedFactor` | float | 1 | Decrease or increase scrolling speed of recycler view. Default is 1, the higher the faster, and vice versa.
-`updateWhenPixelChangedLargerThan` | dimension | 2px | Working like FPS, 0 is smoothest but lowest performance. Recommended value: between 2 and 10
+`updateWhenPixelChangedLargerThan` | dimension | 2px | Working like FPS, 0 is smoothest but lowest performance. Recommended value: between 2 and
