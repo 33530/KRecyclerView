@@ -22,10 +22,13 @@ dependencies {
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 ```
+
 ## Create your adapter inherits `KRecyclerView.EndlessAdapter`
 [See my example code](app/src/main/java/org/k/recyclerview/demo/MainActivity.java)
+
 **Important** KRecyclerView only accepts adapter extends `KRecyclerView.EndlessAdapter` class, otherwise you will get an
 `IllegalArgumentException` at method `KRecyclerView.setAdapter()`.
+
 ## Customize:
 Attribute | Format | Default Value | Description
 --------- | ------ | ------------- | -----------
