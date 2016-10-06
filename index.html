@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Krecyclerview by Khang-NT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Krecyclerview</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/Khang-NT/KRecyclerView" class="btn">View on GitHub</a>
+      <a href="https://github.com/Khang-NT/KRecyclerView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Khang-NT/KRecyclerView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="krecyclerview" class="anchor" href="#krecyclerview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>KRecyclerView</h1>
+
+<p><a href="https://android-arsenal.com/details/1/4442"><img src="https://img.shields.io/badge/Android%20Arsenal-KRecyclerView-green.svg?style=true" alt="Android Arsenal"></a> <a href="https://travis-ci.org/Khang-NT/KRecyclerView"><img src="https://travis-ci.org/Khang-NT/KRecyclerView.svg?branch=master" alt="Build Status"></a> <a href="https://bintray.com/khang-nt/maven/krv/_latestVersion"> <img src="https://api.bintray.com/packages/khang-nt/maven/krv/images/download.svg" alt="Download"> </a></p>
+
+<h1>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h1>
+
+<p><img src="gif/1.gif" alt=""> <img src="gif/2.gif" alt=""></p>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
+
+<div class="highlight highlight-source-groovy"><pre>dependencies {
+    compile <span class="pl-s"><span class="pl-pds">'</span>org.k.recyclerview:krv:$paste-latest-version-here$<span class="pl-pds">'</span></span>
+}</pre></div>
+
+<h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use:</h1>
+
+<h2>
+<a id="add-krecyclerview-to-your-layout" class="anchor" href="#add-krecyclerview-to-your-layout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Add KRecyclerView to your layout:</h2>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">org</span>.k.recyclerview.KRecyclerView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/krv<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">focusedItemHeight</span>=<span class="pl-s"><span class="pl-pds">"</span>200dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">defaultItemHeight</span>=<span class="pl-s"><span class="pl-pds">"</span>80dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">updateWhenPixelChangedLargerThan</span>=<span class="pl-s"><span class="pl-pds">"</span>1dp<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="create-your-adapter-inherits-krecyclerviewendlessadapter" class="anchor" href="#create-your-adapter-inherits-krecyclerviewendlessadapter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create your adapter inherits <code>KRecyclerView.EndlessAdapter</code>
+</h2>
+
+<p><a href="app/src/main/java/org/k/recyclerview/demo/MainActivity.java">See my example code</a></p>
+
+<p><strong>Important</strong> KRecyclerView only accepts adapter extends <code>KRecyclerView.EndlessAdapter</code> class, otherwise you will get an
+<code>IllegalArgumentException</code> at method <code>KRecyclerView.setAdapter()</code>.</p>
+
+<h2>
+<a id="customize" class="anchor" href="#customize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customize:</h2>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Format</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>focusedItemHeight</code></td>
+<td>dimension</td>
+<td>400px</td>
+<td>Max height of focused items</td>
+</tr>
+<tr>
+<td><code>defaultItemHeight</code></td>
+<td>dimension</td>
+<td>200px</td>
+<td>Min height of default items</td>
+</tr>
+<tr>
+<td><code>flingScrollSpeedFactor</code></td>
+<td>float</td>
+<td>1.0f</td>
+<td>Decrease or increase scrolling speed of recycler view. Default is 1.0f, the higher the faster, and vice versa.</td>
+</tr>
+<tr>
+<td><code>updateWhenPixelChangedLargerThan</code></td>
+<td>dimension</td>
+<td>2px</td>
+<td>Working like FPS, 0 is smoothest but lowest performance. Recommended value: between 2 and 10.</td>
+</tr>
+</tbody>
+</table>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Khang-NT/KRecyclerView">Krecyclerview</a> is maintained by <a href="https://github.com/Khang-NT">Khang-NT</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
